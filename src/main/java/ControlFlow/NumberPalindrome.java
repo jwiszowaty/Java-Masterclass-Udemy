@@ -1,7 +1,7 @@
 package ControlFlow;
 
 public class NumberPalindrome {
-   public static boolean isPalindrome(int number) {
+   public static String isPalindrome(int number) {
       int initial = number;
 
       int reversed;
@@ -9,6 +9,6 @@ public class NumberPalindrome {
          reversed = reversed * 10 + initial % 10;
       }
 
-      return reversed == number;
+      return reversed == number ? "true" : "false";
    }
 }

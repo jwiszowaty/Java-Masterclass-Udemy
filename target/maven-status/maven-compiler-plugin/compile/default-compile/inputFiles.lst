@@ -1,20 +1,52 @@
-C:\Users\Jakub.Wiszowaty\Downloads\demo (1)\demo\src\main\java\com\example\demo\ControlFlowEndpoints.java
-C:\Users\Jakub.Wiszowaty\Downloads\demo (1)\demo\src\main\java\com\example\demo\DemoApplication.java
-C:\Users\Jakub.Wiszowaty\Downloads\demo (1)\demo\src\main\java\ControlFlow\DiagonalStar.java
-C:\Users\Jakub.Wiszowaty\Downloads\demo (1)\demo\src\main\java\ControlFlow\EvenDigitSum.java
-C:\Users\Jakub.Wiszowaty\Downloads\demo (1)\demo\src\main\java\ControlFlow\FactorPrinter.java
-C:\Users\Jakub.Wiszowaty\Downloads\demo (1)\demo\src\main\java\ControlFlow\FirstLastDigitSum.java
-C:\Users\Jakub.Wiszowaty\Downloads\demo (1)\demo\src\main\java\ControlFlow\FlourPacker.java
-C:\Users\Jakub.Wiszowaty\Downloads\demo (1)\demo\src\main\java\ControlFlow\GreatestCommonDivisor.java
-C:\Users\Jakub.Wiszowaty\Downloads\demo (1)\demo\src\main\java\ControlFlow\InputCalculator.java
-C:\Users\Jakub.Wiszowaty\Downloads\demo (1)\demo\src\main\java\ControlFlow\LargestPrime.java
-C:\Users\Jakub.Wiszowaty\Downloads\demo (1)\demo\src\main\java\ControlFlow\LastDigitChecker.java
-C:\Users\Jakub.Wiszowaty\Downloads\demo (1)\demo\src\main\java\ControlFlow\NumberInWord.java
-C:\Users\Jakub.Wiszowaty\Downloads\demo (1)\demo\src\main\java\ControlFlow\NumberOfDaysInMonth.java
-C:\Users\Jakub.Wiszowaty\Downloads\demo (1)\demo\src\main\java\ControlFlow\NumberPalindrome.java
-C:\Users\Jakub.Wiszowaty\Downloads\demo (1)\demo\src\main\java\ControlFlow\NumberToWords.java
-C:\Users\Jakub.Wiszowaty\Downloads\demo (1)\demo\src\main\java\ControlFlow\PaintJob.java
-C:\Users\Jakub.Wiszowaty\Downloads\demo (1)\demo\src\main\java\ControlFlow\PerfectNumber.java
-C:\Users\Jakub.Wiszowaty\Downloads\demo (1)\demo\src\main\java\ControlFlow\SharedDigit.java
-C:\Users\Jakub.Wiszowaty\Downloads\demo (1)\demo\src\main\java\ControlFlow\SumOddRange.java
-C:\Users\Jakub.Wiszowaty\Downloads\demo (1)\demo\src\main\java\Main.java
+/Users/jakubwiszowaty/personal-projects/Java-Masterclass-Udemy/src/main/java/ControlFlow/DiagonalStar.java
+/Users/jakubwiszowaty/personal-projects/Java-Masterclass-Udemy/src/main/java/ControlFlow/EvenDigitSum.java
+/Users/jakubwiszowaty/personal-projects/Java-Masterclass-Udemy/src/main/java/ControlFlow/FactorPrinter.java
+/Users/jakubwiszowaty/personal-projects/Java-Masterclass-Udemy/src/main/java/ControlFlow/FirstLastDigitSum.java
+/Users/jakubwiszowaty/personal-projects/Java-Masterclass-Udemy/src/main/java/ControlFlow/FlourPacker.java
+/Users/jakubwiszowaty/personal-projects/Java-Masterclass-Udemy/src/main/java/ControlFlow/GreatestCommonDivisor.java
+/Users/jakubwiszowaty/personal-projects/Java-Masterclass-Udemy/src/main/java/ControlFlow/InputCalculator.java
+/Users/jakubwiszowaty/personal-projects/Java-Masterclass-Udemy/src/main/java/ControlFlow/LargestPrime.java
+/Users/jakubwiszowaty/personal-projects/Java-Masterclass-Udemy/src/main/java/ControlFlow/LastDigitChecker.java
+/Users/jakubwiszowaty/personal-projects/Java-Masterclass-Udemy/src/main/java/ControlFlow/NumberInWord.java
+/Users/jakubwiszowaty/personal-projects/Java-Masterclass-Udemy/src/main/java/ControlFlow/NumberOfDaysInMonth.java
+/Users/jakubwiszowaty/personal-projects/Java-Masterclass-Udemy/src/main/java/ControlFlow/NumberPalindrome.java
+/Users/jakubwiszowaty/personal-projects/Java-Masterclass-Udemy/src/main/java/ControlFlow/NumberToWords.java
+/Users/jakubwiszowaty/personal-projects/Java-Masterclass-Udemy/src/main/java/ControlFlow/PaintJob.java
+/Users/jakubwiszowaty/personal-projects/Java-Masterclass-Udemy/src/main/java/ControlFlow/PerfectNumber.java
+/Users/jakubwiszowaty/personal-projects/Java-Masterclass-Udemy/src/main/java/ControlFlow/SharedDigit.java
+/Users/jakubwiszowaty/personal-projects/Java-Masterclass-Udemy/src/main/java/ControlFlow/SumOddRange.java
+/Users/jakubwiszowaty/personal-projects/Java-Masterclass-Udemy/src/main/java/ExpressionsStatementsAndMore/AreaCalculator.java
+/Users/jakubwiszowaty/personal-projects/Java-Masterclass-Udemy/src/main/java/ExpressionsStatementsAndMore/BarkingDog.java
+/Users/jakubwiszowaty/personal-projects/Java-Masterclass-Udemy/src/main/java/ExpressionsStatementsAndMore/DecimalComparator.java
+/Users/jakubwiszowaty/personal-projects/Java-Masterclass-Udemy/src/main/java/ExpressionsStatementsAndMore/EqualSumChecker.java
+/Users/jakubwiszowaty/personal-projects/Java-Masterclass-Udemy/src/main/java/ExpressionsStatementsAndMore/IntEqualityPrinter.java
+/Users/jakubwiszowaty/personal-projects/Java-Masterclass-Udemy/src/main/java/ExpressionsStatementsAndMore/LeapYear.java
+/Users/jakubwiszowaty/personal-projects/Java-Masterclass-Udemy/src/main/java/ExpressionsStatementsAndMore/MegaBytesConverter.java
+/Users/jakubwiszowaty/personal-projects/Java-Masterclass-Udemy/src/main/java/ExpressionsStatementsAndMore/MinutesToYearsDaysCalculator.java
+/Users/jakubwiszowaty/personal-projects/Java-Masterclass-Udemy/src/main/java/ExpressionsStatementsAndMore/PlayingCat.java
+/Users/jakubwiszowaty/personal-projects/Java-Masterclass-Udemy/src/main/java/ExpressionsStatementsAndMore/PositiveNegativeZero.java
+/Users/jakubwiszowaty/personal-projects/Java-Masterclass-Udemy/src/main/java/ExpressionsStatementsAndMore/SpeedConverter.java
+/Users/jakubwiszowaty/personal-projects/Java-Masterclass-Udemy/src/main/java/ExpressionsStatementsAndMore/TeenNumberChecker.java
+/Users/jakubwiszowaty/personal-projects/Java-Masterclass-Udemy/src/main/java/Inheritance/CarpetCostCalculator/Calculator.java
+/Users/jakubwiszowaty/personal-projects/Java-Masterclass-Udemy/src/main/java/Inheritance/CarpetCostCalculator/Carpet.java
+/Users/jakubwiszowaty/personal-projects/Java-Masterclass-Udemy/src/main/java/Inheritance/CarpetCostCalculator/Floor.java
+/Users/jakubwiszowaty/personal-projects/Java-Masterclass-Udemy/src/main/java/Inheritance/ComplexNumber.java
+/Users/jakubwiszowaty/personal-projects/Java-Masterclass-Udemy/src/main/java/Inheritance/Cylinder/Circle.java
+/Users/jakubwiszowaty/personal-projects/Java-Masterclass-Udemy/src/main/java/Inheritance/Cylinder/Cylinder.java
+/Users/jakubwiszowaty/personal-projects/Java-Masterclass-Udemy/src/main/java/Inheritance/InheritanceChallenge/Employee.java
+/Users/jakubwiszowaty/personal-projects/Java-Masterclass-Udemy/src/main/java/Inheritance/InheritanceChallenge/SalariedEmployee.java
+/Users/jakubwiszowaty/personal-projects/Java-Masterclass-Udemy/src/main/java/Inheritance/InheritanceChallenge/Worker.java
+/Users/jakubwiszowaty/personal-projects/Java-Masterclass-Udemy/src/main/java/Inheritance/Person.java
+/Users/jakubwiszowaty/personal-projects/Java-Masterclass-Udemy/src/main/java/Inheritance/Point.java
+/Users/jakubwiszowaty/personal-projects/Java-Masterclass-Udemy/src/main/java/Inheritance/PoolArea/Cuboid.java
+/Users/jakubwiszowaty/personal-projects/Java-Masterclass-Udemy/src/main/java/Inheritance/PoolArea/Rectangle.java
+/Users/jakubwiszowaty/personal-projects/Java-Masterclass-Udemy/src/main/java/Inheritance/SimpleCalculator.java
+/Users/jakubwiszowaty/personal-projects/Java-Masterclass-Udemy/src/main/java/Inheritance/Wall.java
+/Users/jakubwiszowaty/personal-projects/Java-Masterclass-Udemy/src/main/java/Main.java
+/Users/jakubwiszowaty/personal-projects/Java-Masterclass-Udemy/src/main/java/Polymorphism/CompositionChallenge/Appliance.java
+/Users/jakubwiszowaty/personal-projects/Java-Masterclass-Udemy/src/main/java/Polymorphism/CompositionChallenge/CoffeeMaker.java
+/Users/jakubwiszowaty/personal-projects/Java-Masterclass-Udemy/src/main/java/Polymorphism/CompositionChallenge/DishWasher.java
+/Users/jakubwiszowaty/personal-projects/Java-Masterclass-Udemy/src/main/java/Polymorphism/CompositionChallenge/Refrigerator.java
+/Users/jakubwiszowaty/personal-projects/Java-Masterclass-Udemy/src/main/java/Polymorphism/CompositionChallenge/SmartKitchen.java
+/Users/jakubwiszowaty/personal-projects/Java-Masterclass-Udemy/src/main/java/com/example/demo/ControlFlowEndpoints.java
+/Users/jakubwiszowaty/personal-projects/Java-Masterclass-Udemy/src/main/java/com/example/demo/DemoApplication.java

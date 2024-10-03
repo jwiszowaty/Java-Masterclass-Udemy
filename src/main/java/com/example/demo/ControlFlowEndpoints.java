@@ -184,14 +184,14 @@ public class ControlFlowEndpoints {
     }
 
     @GetMapping("/palindrome/{number}") // checked // added
-    public ResponseEntity isPalindrome(@PathVariable int number) {
+    public ResponseEntity<String> isPalindrome(@PathVariable int number) {
         return ResponseEntity
                 .status(200)
                 .body(NumberPalindrome.isPalindrome(number));
     }
 
     @GetMapping("/number-in-word/{number}") // checked // added
-    public ResponseEntity inWord(@PathVariable int number) {
+    public ResponseEntity<String> inWord(@PathVariable int number) {
         return ResponseEntity
                 .status(200)
                 .body(NumberInWord.printNumberInWord(number));

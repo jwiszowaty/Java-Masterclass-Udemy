@@ -1,7 +1,5 @@
 package ControlFlow;
 
-import lombok.Generated;
-
 public class DiagonalStar {
    public static String printSquareStar(int number) {
       StringBuilder string = new StringBuilder();

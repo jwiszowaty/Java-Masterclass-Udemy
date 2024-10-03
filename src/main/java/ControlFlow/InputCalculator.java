@@ -9,16 +9,19 @@ public class InputCalculator {
       float count = 0.0F;
       Scanner scanner = new Scanner(System.in);
 
-      while(true) {
+      while (true) {
          try {
             String nextEntry = scanner.nextLine();
-            float num = (float)Integer.parseInt(nextEntry);
+            float num = (float) Integer.parseInt(nextEntry);
             sum += num;
-            avg = (long)Math.ceil((double)(sum / ++count));
+            avg = (long) Math.ceil((double) (sum / ++count));
+            scanner.close();
          } catch (NumberFormatException var7) {
-            System.out.print("SUM = " + (int)sum + " AVG = " + avg);
-            return;
+            System.out.print("SUM = " + (int) sum + " AVG = " + avg);
+            scanner.close();
          }
       }
+      
+      
    }
 }

@@ -1,7 +1,5 @@
 package ControlFlow;
 
-import lombok.Generated;
-
 public class EvenDigitSum {
    public static String getEvenDigitSum(int number) {
       if (number < 0) {
