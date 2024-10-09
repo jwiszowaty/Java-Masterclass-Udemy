@@ -6,14 +6,15 @@ public class SpeedConverter {
         double speed = Math.round(kilometersPerHour / kilometerInMiles);
         return (kilometersPerHour >= 0) ? (long) speed : -1;
     }
-    public static void printConversion(double kilometersPerHour) {
+    public static String printConversion(double kilometersPerHour) {
 
         if(kilometersPerHour < 0) {
-            System.out.print("Invalid Value");
+            throw new IllegalArgumentException("number must not be negative");
         } else {
             long speedInMiles = toMilesPerHour(kilometersPerHour);
-            String message = kilometersPerHour + " km/h = " + speedInMiles + " mi/h";
-            System.out.print(message);
+            StringBuilder message = new StringBuilder();
+            message.append(kilometersPerHour).append(" km/h = ").append(speedInMiles).append(" mi/h");
+            return message.toString();
         }
     }
 }

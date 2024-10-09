@@ -1,13 +1,13 @@
 package ExpressionsStatementsAndMore;
 
 public class PositiveNegativeZero {
-    public static void checkNumber(int number){
+    public static String checkNumber(int number){
         if(number > 0) {
-            System.out.print("positive");
+            return "positive";
         } else if(number < 0){
-            System.out.print("negative");
+            return "negative";
         } else {
-            System.out.print("zero");
+            return "zero";
         }
     }
 }

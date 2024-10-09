@@ -1,9 +1,9 @@
 package ExpressionsStatementsAndMore;
 
 public class MinutesToYearsDaysCalculator {
-    public static void printYearsAndDays(long minutes) {
+    public static String printYearsAndDays(long minutes) {
         if (minutes < 0) {
-            System.out.print("Invalid Value");
+            throw new IllegalArgumentException("number must not be negative");
         } else {
 
             int oneHourInMinutes = 60;
@@ -14,8 +14,9 @@ public class MinutesToYearsDaysCalculator {
             int days = (int) hours / oneDayInHours;
             int years = (int) days / oneYearInDays;
             days =  days % oneYearInDays;
-
-            System.out.print(minutes + " min" + " = " + years + " y and " + days + " d");
+            StringBuilder message = new StringBuilder();
+            message.append(minutes).append(" min = ").append(years).append(" y and ").append(days).append(" d");
+            return message.toString();
         }
     }
 }
