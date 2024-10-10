@@ -19,6 +19,7 @@ Polymorphism\CompositionChallenge\SmartKitchen.class
 Inheritance\CarpetCostCalculator\Carpet.class
 Inheritance\SimpleCalculator.class
 ControlFlow\NumberPalindrome.class
+com\example\demo\InheritanceEndpoints.class
 ControlFlow\FactorPrinter.class
 ControlFlow\LargestPrime.class
 com\example\demo\DemoApplication.class
