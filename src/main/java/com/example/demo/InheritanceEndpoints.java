@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("api")
 public class InheritanceEndpoints {
 
-    @GetMapping("/simple-calculator") // checked
+    @GetMapping("/simple-calculator") // checked // added
     public ResponseEntity<String> simpleCalculation(
             @RequestParam(value = "number1") double number1,
             @RequestParam(value = "number2") double number2,
@@ -41,7 +41,7 @@ public class InheritanceEndpoints {
         }
     }
 
-    @GetMapping("/complex-numbers") // checked
+    @GetMapping("/complex-numbers") // checked // added
     public ResponseEntity<String> simpleCalculation(
             @RequestParam(value = "real1") double real1,
             @RequestParam(value = "imaginary1") double imaginary1,
@@ -64,7 +64,7 @@ public class InheritanceEndpoints {
                     .body(e.getMessage());
         }
     }
-    @GetMapping("/person") // checked
+    @GetMapping("/person") // checked // added
     public ResponseEntity<String> createPerson(
             @RequestParam(value = "first") String first,
             @RequestParam(value = "last") String last,
@@ -83,7 +83,7 @@ public class InheritanceEndpoints {
                     .body(e.getMessage());
         }
     }
-    @GetMapping("/point") // checked
+    @GetMapping("/point") // checked // added
     public ResponseEntity<String> findDistance(
             @RequestParam(value = "x1") int x1,
             @RequestParam(value = "y1") int y1,
@@ -102,7 +102,7 @@ public class InheritanceEndpoints {
                     .body(e.getMessage());
         }
     }
-    @GetMapping("/wall") // checked
+    @GetMapping("/wall") // checked // added
     public ResponseEntity<String> createWall(
             @RequestParam(value = "width") double width,
             @RequestParam(value = "height") double height) {
@@ -117,7 +117,7 @@ public class InheritanceEndpoints {
                     .body(e.getMessage());
         }
     }
-    @GetMapping("/cuboid") // checked
+    @GetMapping("/cuboid") // checked // added
     public ResponseEntity<String> createCuboid(
             @RequestParam(value = "width") double width,
             @RequestParam(value = "length") double length,
@@ -133,7 +133,7 @@ public class InheritanceEndpoints {
                     .body(e.getMessage());
         }
     }
-    @GetMapping("/carpet") // check
+    @GetMapping("/carpet") // check // added
     public ResponseEntity<String> calculateCarpetCost(
             @RequestParam(value = "width") double width,
             @RequestParam(value = "length") double length,
