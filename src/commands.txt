@@ -1,0 +1,5 @@
+mvn clean package
+java -jar [file directory]
+docker build -t demo .
+docker tag demo jwisz/testrestapi
+docker push jwisz/testrestapi
