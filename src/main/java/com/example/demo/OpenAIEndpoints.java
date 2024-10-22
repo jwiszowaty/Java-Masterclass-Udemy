@@ -7,9 +7,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.io.OutputStream;
+import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.nio.file.Files;
@@ -21,26 +19,28 @@ public class OpenAIEndpoints {
         @GetMapping("/reason") //
         public ResponseEntity provideReason() {
             try {
+                String content = new String(Files.readAllBytes(Paths.get("/Users/jakubwiszowaty/personal-projects/IdeaProjects/Java-Masterclass-Udemy/src/main/resources/cv.json")));
+                JSONObject jsonObject = new JSONObject(content);
                 URL url = new URL("https://api.openai.com/v1/chat/completions");
                 HttpURLConnection connection = (HttpURLConnection) url.openConnection();
                 connection.setRequestMethod("POST");
                 connection.setRequestProperty("Content-Type", "application/json");
                 connection.setRequestProperty("Authorization", "Bearer " + System.getenv("VITE_OPENAI_API_KEY"));
                 connection.setDoOutput(true);
-                String jsonInputString = "{\"model\":\"gpt-4o\",\"messages\":[{\"role\":\"system\",\"content\":\"You are a helpful assistant.\"},{\"role\":\"user\",\"content\":\" Stwórz zadania na zajęcia angieslkiego dla ucznia w wieku 12 lat na podane zagadnienia : konkstrukcja there is / there are - twierdzenia, pytania i przeczenia" +
-                        ",uzycie a / any / some w zdaniach z there is/are" +
-                        ",przyimki miejsca\"}]}";
+                String jsonInputString = "{\"model\":\"gpt-4o\",\"messages\":[{\"role\":\"system\",\"content\":\"You are a analysing Jakub's cv.\"},{\"role\":\"user\",\"content\":\"" +
+                        "Give one reason for why my experience and skills make me an exceptional Software Developer based on my cv: " +
+                         "\"}]}";
                 StringBuilder response = new StringBuilder();
                 try (OutputStream outputStream = connection.getOutputStream()) {
                     byte[] input =jsonInputString.getBytes("utf-8");
                     outputStream.write(input, 0, input.length);
                 }
 
-                try (BufferedReader bufferedReader = new BufferedReader(
+                try (BufferedReader bufferedReader2 = new BufferedReader(
                         new InputStreamReader(connection.getInputStream(),"utf-8")
                 )) {
                     String responseLine;
-                    while ((responseLine = bufferedReader.readLine()) != null) {
+                    while ((responseLine = bufferedReader2.readLine()) != null) {
                         response.append(responseLine.trim());
                     }
                 }

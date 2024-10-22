@@ -1,0 +1,142 @@
+{
+"name": "Jakub Wiszowaty",
+"desiredCareer": "Junior Software Engineer",
+"about": "I'm a curious and fast-learning junior software developer with a strong background in chemistry. I am eager to join a team with a supportive environment to develop my skills further and use my excellent problem-solving skills to contribute to real-world projects. I have experience with working in teams and independently. In the past four months, I have explored PL/SQL, Java and testing. I'm currently undertaking the Java 17 Masterclass course on Udemy.",
+"technical_skills": {
+    "languages": ["JavaScript", "Java"],
+    "front_end": ["HTML", "CSS", "React", "React Native", "Tableau"],
+    "back_end": ["PostgreSQL", "Express.js", "seeding", "PL/SQL"],
+    "testing": ["TDD", "Jest", "Supertest", "JUnit", "Selenium"],
+    "hosting": ["ElephantSQL", "Render", "Netlify", "Docker"],
+    "methodologies": ["Agile", "SCRUM"]
+},
+"experience": [
+{
+  "title": "Trainee Software Engineer",
+  "company": "Ten10",
+  "date_range": "May 2024 - Present",
+  "projects": [
+    {
+      "name": "Rock Paper Scissors (Scanner)",
+      "link": "GitHub"
+    },
+    {
+      "name": "Spring Boot REST API",
+      "link": "GitHub"
+    }
+  ],
+  "responsibilities": [
+    "Completed two specialized trainings in Data Science and Software Development."
+  ]
+},
+{
+  "title": "Trainee Software Engineer",
+  "company": "Northcoders",
+  "date_range": "Aug 2023 - Nov 2023",
+  "projects": [
+    {
+      "name": "PSQL & React",
+      "backend_repo": "back end repo",
+      "website": "website"
+    },
+    {
+      "name": "PSQL & React Native",
+      "backend_repo": "back end repo",
+      "frontend_repo": "front end repo",
+      "app_presentation": "app presentation"
+    }
+  ],
+  "responsibilities": [
+    "The boot camp involved high-intensity learning where I learned about the industry's best practices.",
+    "Practiced collaboration in paired programming throughout the boot camp and significantly improved interpersonal skills."
+  ]
+},
+{
+  "title": "English Tutor",
+  "company": "Online",
+  "date_range": "Oct 2019 - Present",
+  "responsibilities": [
+    "Prepared over 600 hours of online lessons for Polish high school students.",
+    "Improved my students' pronunciation.",
+    "Helped them overcome a fear of speaking in a foreign language."
+  ]
+},
+{
+  "title": "Research Assistant",
+  "company": "NewChem Technologies",
+  "date_range": "Jun 2022 - Jun 2023",
+  "responsibilities": [
+    "Organic synthesis of substituted amphetamines and analogues of cannabidiols.",
+    "Reversed and normal phase purification of organic compounds using Biotage.",
+    "Analytical methods used: NMR, LC-MS, HPLC."
+  ]
+},
+{
+  "title": "Research Project",
+  "company": "BiBerChem Research",
+  "date_range": "Aug - Sept 2021",
+  "supervisor": "Prof. Bernard T Golding",
+  "responsibilities": [
+    "Organic synthesis of analogues of barbituric acid.",
+    "Purification using manual column chromatography and recrystallisation.",
+    "Analytical methods used: LC-MS, HPLC, NMR (1H, 13C, 19F)."
+  ]
+},
+{
+  "title": "Summer Intern",
+  "company": "NewChem Technologies",
+  "date_range": "Aug - Sept 2020",
+  "responsibilities": [
+    "Organic synthesis of analogues of cannabidiols."
+  ]
+},
+{
+  "title": "Team Member",
+  "company": "Creams Café Newcastle",
+  "date_range": "Jul 2017 - Aug 2021",
+  "responsibilities": [
+    "Worked efficiently with a team of 13 staff members in a busy restaurant environment.",
+    "Maintained clean working space and shared responsibilities of a waiter, kitchen porter, cashier."
+  ]
+}
+],
+"education": [
+{
+  "degree": "Master of Chemistry (2:1)",
+  "institution": "Newcastle University",
+  "date_range": "Oct 2018 - June 2022"
+}
+],
+"volunteer_work": [
+{
+  "title": "Vaccination Centre Volunteer",
+  "organization": "RVI Newcastle Hospitals NHS Foundation Trust",
+  "location": "Centre For Life in Newcastle",
+  "date_range": "Oct - Dec 2021",
+  "responsibilities": [
+    "4-hour shift on Sundays for three months.",
+    "Welcomed and directed patients in the centre to the check-in desks and kept them company in the queue, distracting them from their fear of vaccination.",
+    "Organized a line for patients under 18 to maintain a good flow of patients and their parents, ensuring a comforting visit."
+  ]
+},
+{
+  "title": "Pharmacy Department Volunteer",
+  "organization": "RVI Newcastle Hospitals NHS Foundation Trust",
+  "date_range": "Feb 2022",
+  "responsibilities": [
+    "4-hour shift on Sundays for three weeks.",
+    "Contacted COVID-19 patients with underlying conditions to confirm their details and dispatched their medication to their homes."
+  ]
+},
+{
+  "title": "Emergency Department Volunteer",
+  "organization": "RVI Newcastle Hospitals NHS Foundation Trust",
+  "date_range": "Oct - Dec 2022",
+  "responsibilities": [
+    "4-hour night shift on Saturdays.",
+    "Conversed with patients and comforted them with available food and beverages.",
+    "Helped communicate between the nurses/doctors and patients, notifying personnel about anything that needed attention."
+  ]
+}
+]
+}
