@@ -55,9 +55,97 @@ public class OpenAIEndpoints {
             } catch (Exception e) {
                 return ResponseEntity
                         .status(400)
-                        .body(e.getMessage());
+                        .body(e.getMessage() + "hi");
             }
         }
+    @GetMapping("/feedback/grammar") //
+    public ResponseEntity provideFeedbackGrammar() {
+        try {
+            URL url = new URL("https://api.openai.com/v1/chat/completions");
+            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+            connection.setRequestMethod("POST");
+            connection.setRequestProperty("Content-Type", "application/json");
+            connection.setRequestProperty("Authorization", "Bearer " + System.getenv("VITE_OPENAI_API_KEY"));
+            connection.setDoOutput(true);
+            String jsonInputString = "{\"model\":\"gpt-4o\",\"messages\":[{\"role\":\"system\",\"content\":\"You are analysing essays and other written work from students learning English. " +
+                    "Mark sentences with grammatical mistakes by placing them inside <span class=\'grammar\'></span>." +
+                    "At the end of each incorrect sentence add superscript integer." +
+                    "inside <div class=\'grammar-feedback\'></div> place explanations in Polish, each in <p class=\'explanation\'></p> about each mistakes starting explanation with corresponding superscript integer." +
+                    "\"},{\"role\":\"user\",\"content\":\"" +
+                    "She is going shopping. She are baking a cake. She is a good student" +
+                    "\"}]}";
+            StringBuilder response = new StringBuilder();
+            try (OutputStream outputStream = connection.getOutputStream()) {
+                byte[] input =jsonInputString.getBytes("utf-8");
+                outputStream.write(input, 0, input.length);
+            }
+
+            try (BufferedReader bufferedReader2 = new BufferedReader(
+                    new InputStreamReader(connection.getInputStream(),"utf-8")
+            )) {
+                String responseLine;
+                while ((responseLine = bufferedReader2.readLine()) != null) {
+                    response.append(responseLine.trim());
+                }
+            }
+            int responseCode = connection.getResponseCode();
+            String responseMessage = connection.getResponseMessage();
+            System.out.println(responseCode + " " + responseMessage);
+            System.out.println(response);
+            JSONObject responseJSON = new JSONObject(response.toString());
+            return ResponseEntity
+                    .status(200)
+                    .body(responseJSON.getJSONArray("choices").getJSONObject(0).getJSONObject("message").getString("content"));
+        } catch (Exception e) {
+            return ResponseEntity
+                    .status(400)
+                    .body(e.getMessage());
+        }
+    }
+    @GetMapping("/feedback/vocab") //
+    public ResponseEntity provideFeedbackVocab() {
+        try {
+            URL url = new URL("https://api.openai.com/v1/chat/completions");
+            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+            connection.setRequestMethod("POST");
+            connection.setRequestProperty("Content-Type", "application/json");
+            connection.setRequestProperty("Authorization", "Bearer " + System.getenv("VITE_OPENAI_API_KEY"));
+            connection.setDoOutput(true);
+            String jsonInputString = "{\"model\":\"gpt-4o\",\"messages\":[{\"role\":\"system\",\"content\":\"You are analysing essays and other written work from students learning English. " +
+                    " Mark words which could be replaced with more interesting synonyms with <span class=\'vocab\'</span>." +
+                    "At the end of each of those words add superscript integer." +
+                    "inside <div class=\'vocab-feedback\'></div> place explanations in Polish, each in <p class=\'explanation\'></p> about each word starting explanation with corresponding superscript integer." +
+                    "\"},{\"role\":\"user\",\"content\":\"" +
+                    "She is going shopping. She are baking a cake. She is a good student" +
+                    "\"}]}";
+            StringBuilder response = new StringBuilder();
+            try (OutputStream outputStream = connection.getOutputStream()) {
+                byte[] input =jsonInputString.getBytes("utf-8");
+                outputStream.write(input, 0, input.length);
+            }
+
+            try (BufferedReader bufferedReader2 = new BufferedReader(
+                    new InputStreamReader(connection.getInputStream(),"utf-8")
+            )) {
+                String responseLine;
+                while ((responseLine = bufferedReader2.readLine()) != null) {
+                    response.append(responseLine.trim());
+                }
+            }
+            int responseCode = connection.getResponseCode();
+            String responseMessage = connection.getResponseMessage();
+            System.out.println(responseCode + " " + responseMessage);
+            System.out.println(response);
+            JSONObject responseJSON = new JSONObject(response.toString());
+            return ResponseEntity
+                    .status(200)
+                    .body(responseJSON.getJSONArray("choices").getJSONObject(0).getJSONObject("message").getString("content"));
+        } catch (Exception e) {
+            return ResponseEntity
+                    .status(400)
+                    .body(e.getMessage());
+        }
+    }
     @GetMapping("/image/{prompt}") //
     public ResponseEntity provideImage(@PathVariable String prompt) {
         try {
