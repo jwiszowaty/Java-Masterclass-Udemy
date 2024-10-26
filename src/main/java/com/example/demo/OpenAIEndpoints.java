@@ -1,11 +1,9 @@
 package com.example.demo;
 
 import org.json.JSONObject;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.io.*;
 import java.net.HttpURLConnection;
@@ -58,8 +56,13 @@ public class OpenAIEndpoints {
                         .body(e.getMessage() + "hi");
             }
         }
-    @GetMapping("/feedback/grammar") //
-    public ResponseEntity provideFeedbackGrammar() {
+    @PostMapping(path = "/feedback/grammar",
+            consumes = MediaType.TEXT_PLAIN_VALUE,
+            produces = MediaType.APPLICATION_JSON_VALUE
+    )    //
+    public ResponseEntity provideFeedbackGrammar(
+            @RequestBody String text
+    ) {
         try {
             URL url = new URL("https://api.openai.com/v1/chat/completions");
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
@@ -74,7 +77,7 @@ public class OpenAIEndpoints {
                     "return it in this form: <div class=\'writing\'>{place the text and it's formated sentences here}</div><div class=\'grammar-feedback\'></div></div>." +
                     "Put the integers that need to be supersciprted in <sup></sup>" +
                     "\"},{\"role\":\"user\",\"content\":\"" +
-                    "She is going shopping. She are baking a cake. She is a good student" +
+                    text +
                     "\"}]}";
             StringBuilder response = new StringBuilder();
             try (OutputStream outputStream = connection.getOutputStream()) {
@@ -104,8 +107,10 @@ public class OpenAIEndpoints {
                     .body(e.getMessage());
         }
     }
-    @GetMapping("/feedback/vocab") //
-    public ResponseEntity provideFeedbackVocab() {
+    @GetMapping("/feedback/{text}/vocab") //
+    public ResponseEntity provideFeedbackVocab(
+            @PathVariable String text
+    ) {
         try {
             URL url = new URL("https://api.openai.com/v1/chat/completions");
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
@@ -118,9 +123,9 @@ public class OpenAIEndpoints {
                     "At the end of each of those words add superscript integer." +
                     "inside <div class=\'vocab-feedback\'></div> place explanations in Polish, each in <p class=\'explanation\'></p> about each word starting explanation with corresponding superscript integer." +
                     "return it in this form: <div class=\'writing\'>{place the text and it's formated words here}</div><div class=\'vocab-feedback\'></div></div>." +
-                    "Put the integers that need to be supersciprted in <sup></sup>" +
+                    "Put the integers that need to be superscripted in <sup></sup>" +
                     "\"},{\"role\":\"user\",\"content\":\"" +
-                    "She is going shopping. She are baking a cake. She is a good student" +
+                    text +
                     "\"}]}";
             StringBuilder response = new StringBuilder();
             try (OutputStream outputStream = connection.getOutputStream()) {
