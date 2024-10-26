@@ -57,11 +57,11 @@ public class OpenAIEndpoints {
             }
         }
     @PostMapping(path = "/feedback/grammar",
-            consumes = MediaType.TEXT_PLAIN_VALUE,
+            consumes = MediaType.APPLICATION_JSON_VALUE,
             produces = MediaType.APPLICATION_JSON_VALUE
     )    //
     public ResponseEntity provideFeedbackGrammar(
-            @RequestBody String text
+            @RequestBody JSONObject request
     ) {
         try {
             URL url = new URL("https://api.openai.com/v1/chat/completions");
@@ -77,7 +77,7 @@ public class OpenAIEndpoints {
                     "return it in this form: <div class=\'writing\'>{place the text and it's formated sentences here}</div><div class=\'grammar-feedback\'></div></div>." +
                     "Put the integers that need to be supersciprted in <sup></sup>" +
                     "\"},{\"role\":\"user\",\"content\":\"" +
-                    text +
+                    request.getString("text") +
                     "\"}]}";
             StringBuilder response = new StringBuilder();
             try (OutputStream outputStream = connection.getOutputStream()) {
