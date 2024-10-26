@@ -71,6 +71,8 @@ public class OpenAIEndpoints {
                     "Mark sentences with grammatical mistakes by placing them inside <span class=\'grammar\'></span>." +
                     "At the end of each incorrect sentence add superscript integer." +
                     "inside <div class=\'grammar-feedback\'></div> place explanations in Polish, each in <p class=\'explanation\'></p> about each mistakes starting explanation with corresponding superscript integer." +
+                    "return it in this form: <div class=\'writing\'>{place the text and it's formated sentences here}</div><div class=\'grammar-feedback\'></div></div>." +
+                    "Put the integers that need to be supersciprted in <sup></sup>" +
                     "\"},{\"role\":\"user\",\"content\":\"" +
                     "She is going shopping. She are baking a cake. She is a good student" +
                     "\"}]}";
