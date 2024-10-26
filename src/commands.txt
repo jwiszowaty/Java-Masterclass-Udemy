@@ -1,4 +1,4 @@
 mvn clean package
+java -jar ./target/JavaMasterclassUdemy-1.0-SNAPSHOT.jar
 docker build -t jwisz/testrestapi .
 docker push jwisz/testrestapi
-java -jar [file directory]

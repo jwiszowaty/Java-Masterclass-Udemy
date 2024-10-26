@@ -117,6 +117,8 @@ public class OpenAIEndpoints {
                     " Mark words which could be replaced with more interesting synonyms with <span class=\'vocab\'</span>." +
                     "At the end of each of those words add superscript integer." +
                     "inside <div class=\'vocab-feedback\'></div> place explanations in Polish, each in <p class=\'explanation\'></p> about each word starting explanation with corresponding superscript integer." +
+                    "return it in this form: <div class=\'writing\'>{place the text and it's formated words here}</div><div class=\'vocab-feedback\'></div></div>." +
+                    "Put the integers that need to be supersciprted in <sup></sup>" +
                     "\"},{\"role\":\"user\",\"content\":\"" +
                     "She is going shopping. She are baking a cake. She is a good student" +
                     "\"}]}";
