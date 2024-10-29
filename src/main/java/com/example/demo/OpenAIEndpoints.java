@@ -1,5 +1,6 @@
 package com.example.demo;
 
+import jdk.jfr.Frequency;
 import org.json.JSONObject;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -45,7 +46,6 @@ public class OpenAIEndpoints {
                 int responseCode = connection.getResponseCode();
                 String responseMessage = connection.getResponseMessage();
                 System.out.println(responseCode + " " + responseMessage);
-                System.out.println(response);
                 JSONObject responseJSON = new JSONObject(response.toString());
                 return ResponseEntity
                         .status(200)
@@ -59,7 +59,7 @@ public class OpenAIEndpoints {
     @PostMapping(path = "/feedback/grammar",
             consumes = MediaType.APPLICATION_JSON_VALUE,
             produces = MediaType.APPLICATION_JSON_VALUE
-    )    //
+    )
     public ResponseEntity provideFeedbackGrammar(
             @RequestBody JSONObject request
     ) {
@@ -77,7 +77,7 @@ public class OpenAIEndpoints {
                     "return it in this form: <div class=\'writing\'>{place the text and it's formated sentences here}</div><div class=\'grammar-feedback\'></div></div>." +
                     "Put the integers that need to be supersciprted in <sup></sup>" +
                     "\"},{\"role\":\"user\",\"content\":\"" +
-                    request.getString("text") +
+
                     "\"}]}";
             StringBuilder response = new StringBuilder();
             try (OutputStream outputStream = connection.getOutputStream()) {
@@ -96,7 +96,7 @@ public class OpenAIEndpoints {
             int responseCode = connection.getResponseCode();
             String responseMessage = connection.getResponseMessage();
             System.out.println(responseCode + " " + responseMessage);
-            System.out.println(response);
+            System.out.println(request);
             JSONObject responseJSON = new JSONObject(response.toString());
             return ResponseEntity
                     .status(200)
@@ -107,9 +107,12 @@ public class OpenAIEndpoints {
                     .body(e.getMessage());
         }
     }
-    @GetMapping("/feedback/{text}/vocab") //
+    @PostMapping(path = "/feedback/grammar",
+            consumes = MediaType.APPLICATION_JSON_VALUE,
+            produces = MediaType.APPLICATION_JSON_VALUE
+    )
     public ResponseEntity provideFeedbackVocab(
-            @PathVariable String text
+            @RequestBody JSONObject request
     ) {
         try {
             URL url = new URL("https://api.openai.com/v1/chat/completions");
@@ -125,7 +128,7 @@ public class OpenAIEndpoints {
                     "return it in this form: <div class=\'writing\'>{place the text and it's formated words here}</div><div class=\'vocab-feedback\'></div></div>." +
                     "Put the integers that need to be superscripted in <sup></sup>" +
                     "\"},{\"role\":\"user\",\"content\":\"" +
-                    text +
+
                     "\"}]}";
             StringBuilder response = new StringBuilder();
             try (OutputStream outputStream = connection.getOutputStream()) {
@@ -144,7 +147,7 @@ public class OpenAIEndpoints {
             int responseCode = connection.getResponseCode();
             String responseMessage = connection.getResponseMessage();
             System.out.println(responseCode + " " + responseMessage);
-            System.out.println(response);
+            System.out.println(request);
             JSONObject responseJSON = new JSONObject(response.toString());
             return ResponseEntity
                     .status(200)
