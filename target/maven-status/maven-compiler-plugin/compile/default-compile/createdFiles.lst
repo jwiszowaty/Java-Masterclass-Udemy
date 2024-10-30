@@ -51,6 +51,7 @@ Polymorphism/PolymorphismChallenge/ElectricCar.class
 Polymorphism/PolymorphismChallenge/GasPoweredCar.class
 Polymorphism/CompositionChallenge/DishWasher.class
 Polymorphism/OOPMasterChallenge/Side.class
+EnglishLearningPlatform/FeedbackRequest.class
 com/example/demo/ControlFlowEndpoints.class
 ExpressionsStatementsAndMore/PositiveNegativeZero.class
 ControlFlow/LastDigitChecker.class
