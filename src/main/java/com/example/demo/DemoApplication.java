@@ -18,7 +18,8 @@ public class DemoApplication {
 		return new WebMvcConfigurer() {
 			@Override
 			public void addCorsMappings(CorsRegistry registry) {
-				registry.addMapping("/**").allowedOrigins("https://jakubwiszowaty.com", "http://localhost:5173");
+				registry.addMapping("/api/**").allowedOrigins("https://jakubwiszowaty.com", "http://localhost:5173");
+				registry.addMapping("/generate/**").allowedOrigins("https://jakubwiszowaty.com", "http://localhost:5173");
 			}
 		};
 	}

@@ -108,7 +108,7 @@ public class OpenAIEndpoints {
     }
 
     @PostMapping("/feedback/vocab")
-    public ResponseEntity provideFeedbackVocab(@RequestBody FeedbackRequest request) {
+    public ResponseEntity<String> provideFeedbackVocab(@RequestBody FeedbackRequest request) {
 
             StringBuilder response = new StringBuilder();
 
@@ -154,6 +154,7 @@ public class OpenAIEndpoints {
                     .body(e.getMessage());
         }
     }
+
     @GetMapping("/image/{prompt}") //
     public ResponseEntity provideImage(@PathVariable String prompt) {
         try {
