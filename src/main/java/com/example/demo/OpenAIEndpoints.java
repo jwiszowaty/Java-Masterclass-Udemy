@@ -70,11 +70,12 @@ public class OpenAIEndpoints {
             connection.setDoOutput(true);
 
             String jsonInputString = "{\"model\":\"gpt-4o\",\"messages\":[{\"role\":\"system\",\"content\":\"You are analysing essays and other written work from students learning English. " +
-                    "1. Mark SENTENCES with grammatical mistakes using span element and class \'grammar\'" +
-                    "2. At the end of each of those sentences add superscript integer using sup element. Include them inside .grammar" +
-                    "3. inside div.grammar-feedback place explanations in Polish, except English words/phrases used or to be used in the writing. Place each explanation inside p.explanation with corresponding superscript in sup element." +
-                    "4. return it in this form: <div class=\'writing\'>{place the text and it's formated words here}</div><div class=\'vocab-feedback\'></div></div>." +
-                    "5. avoid ```html``` formating or any other formatting" +
+                    "Place each sentence in div.sentence" +
+                    "Mark SENTENCES with grammatical mistakes using span.grammar inside its div.sentence" +
+                    "At the end of each of those sentences add superscript integer using sup element. Include them inside .grammar" +
+                    "Inside div.grammar-feedback place explanations in Polish, except English words/phrases used or to be used in the writing. Place each explanation inside p.explanation with corresponding superscript in sup element." +
+                    "return it in this form: <div class=\'writing\'>{place the text and it's formated words here}</div><div class=\'vocab-feedback\'></div></div>." +
+                    "avoid ```html``` formating or any other formatting" +
                     "\"},{\"role\":\"user\",\"content\":\"" +
                     request.getText() +
                     "\"}]}";
@@ -120,7 +121,8 @@ public class OpenAIEndpoints {
             connection.setRequestProperty("Authorization", "Bearer " + System.getenv("VITE_OPENAI_API_KEY"));
             connection.setDoOutput(true);
             String jsonInputString = "{\"model\":\"gpt-4o\",\"messages\":[{\"role\":\"system\",\"content\":\"You are analysing essays and other written work from students learning English. " +
-                    " Mark words which could be replaced with more interesting synonyms with <span class=\'vocab\'</span>." +
+                    "Place each sentence in div.sentence" +
+                    "Mark words which should be replaced for another to improve clarity or attractiveness using span.vocab inside div.sentence." +
                     "At the end of each of those words add superscript integer." +
                     "inside <div class=\'vocab-feedback\'></div> place explanations in Polish, each in <p class=\'explanation\'></p> about each word starting explanation with corresponding superscript integer." +
                     "return it in this form: <div class=\'writing\'>{place the text and it's formated words here}</div><div class=\'vocab-feedback\'></div></div>." +
